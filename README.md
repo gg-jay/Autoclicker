@@ -1,2 +1,2 @@
 # Autoclicker
-Python script autoclicker
+# created a python autoclicker
