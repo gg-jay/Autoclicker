@@ -55,4 +55,17 @@ while True:
         Speed = int(speed.get())
         print(state)
         if Amount == 0:
-            time.sleep
+            time.sleep(Speed / 1000)
+            mouse.mouse_event(2, 0, 0, 0, 0) #left mouse button down
+            mouse.mouse_event(4, 0, 0, 0, 0) #left mouse button up
+            X += 1
+            print("Clicked %s Times" % (X))
+
+        elif X < Amount and state == True:
+            time.sleep(Speed / 1000)
+            mouse.mouse_event(2, 0, 0, 0, 0) # left mouse button down
+            mouse.mouse_event(4, 0, 0, 0, 0) # left mouse button up
+            X += 1
+            print("Clincked %s Times" % (X))
+            if X == Amount:
+                state = False
